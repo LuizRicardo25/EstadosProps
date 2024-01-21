@@ -1,4 +1,55 @@
 
+# Exemplo de Estados e Props no React
+
+Este exemplo demonstra o uso de estados (`state`) e propriedades (`props`) no React, utilizando um componente `Contador`.
+
+## Componente App (Pai)
+
+O componente `App` é o componente pai que passa um valor inicial para o componente `Contador`.
+
+```jsx
+import React from 'react';
+import Contador from './Contador';
+
+function App() {
+  return (
+    <div>
+      <h1>Exemplo de Contador</h1>
+      <Contador valorInicial={5} />
+    </div>
+  );
+}
+
+export default App;
+Componente Contador (Filho)
+O componente Contador utiliza tanto props quanto state. Ele recebe valorInicial como uma prop e usa o estado para manter e atualizar o valor do contador.
+
+jsx
+import React, { useState } from 'react';
+
+function Contador(props) {
+  // Inicializando o estado com o valor inicial recebido pelas props
+  const [contador, setContador] = useState(props.valorInicial);
+
+  // Função para incrementar o contador
+  const incrementar = () => {
+    setContador(contador + 1);
+  };
+
+  return (
+    <div>
+      <p>Valor do Contador: {contador}</p>
+      <button onClick={incrementar}>Incrementar</button>
+    </div>
+  );
+}
+
+export default Contador;
+Detalhes do Exemplo
+App (Componente Pai): Passa um valorInicial para o componente Contador. Neste exemplo, o valor 5 é passado como prop.
+Contador (Componente Filho): Recebe valorInicial como uma prop e utiliza o useState para gerenciar o estado do contador. Quando o botão é clicado, a função incrementar é chamada, atualizando o estado e, consequentemente, re-renderizando o componente com o novo valor do contador.
+Este exemplo ilustra um uso clássico de estados e props no React para criar componentes interativos e reutilizáveis.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,6 +121,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-# EstadosProps
-REACT - Demonstrando o funcionamento de Estados e Props
- a7cf723ec877d6c729e2ade5cf1069cf1ca25aa2
