@@ -1,4 +1,3 @@
-
 # Exemplo de Estados e Props no React
 
 Este exemplo demonstra o uso de estados (`state`) e propriedades (`props`) no React, utilizando um componente `Contador`.
@@ -21,10 +20,12 @@ function App() {
 }
 
 export default App;
+
+
 Componente Contador (Filho)
 O componente Contador utiliza tanto props quanto state. Ele recebe valorInicial como uma prop e usa o estado para manter e atualizar o valor do contador.
 
-jsx
+
 import React, { useState } from 'react';
 
 function Contador(props) {
@@ -45,10 +46,13 @@ function Contador(props) {
 }
 
 export default Contador;
+
+
 Detalhes do Exemplo
 App (Componente Pai): Passa um valorInicial para o componente Contador. Neste exemplo, o valor 5 é passado como prop.
 Contador (Componente Filho): Recebe valorInicial como uma prop e utiliza o useState para gerenciar o estado do contador. Quando o botão é clicado, a função incrementar é chamada, atualizando o estado e, consequentemente, re-renderizando o componente com o novo valor do contador.
 Este exemplo ilustra um uso clássico de estados e props no React para criar componentes interativos e reutilizáveis.
+
 
 # Getting Started with Create React App
 
